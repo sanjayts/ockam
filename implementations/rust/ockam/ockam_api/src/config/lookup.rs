@@ -231,11 +231,11 @@ pub struct SpaceLookup {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct ProjectLookup {
     /// How to reach the node hosting this project
-    pub node_route: Option<MultiAddr>,
+    pub node_route: MultiAddr,
     /// Identifier of this project
     pub id: String,
     /// Identifier of the IDENTITY of the project (for secure-channel)
-    pub identity_id: Option<IdentityIdentifier>,
+    pub identity_id: IdentityIdentifier,
     /// Project authority information.
     pub authority: Option<ProjectAuthority>,
 }
